@@ -1,7 +1,7 @@
 ## Abstract
 
 >Human-object interaction (HOI) detection extends beyond the localization of humans and objects in images to identify the interactions between them. Existing approaches predominantly frame the HOI task as a detection problem, emphasizing the identification of human and object-bounding boxes alongside their interactions. However, we argue that this bounding-box-based paradigm is inherently limited in achieving fine-grained HOI detection due to its coarse localization. In this work, we focus on a more fine-grained case of the HOI: Segmentation-grounded Human-object Interaction (SHOI) detection. This new task shifts the focus from coarse bounding boxes to pixel-level masks, enabling more precise human-object interaction recognition. First, we introduce three benchmark datasets—VS-COCO, HICO-SG, and InterSeg to build the benchmark of SHOI and establish a comprehensive benchmark including a number of two-stage and one-stage models, systematically evaluating their effectiveness in SHOI detection. Furthermore, we introduce a novel baseline model, Ag-BiGT, agent-based query with bipartite graph-transformer.  Specifically, we first leverage a bipartite graph transformer to refine the human and object nodes by long-range and local context reasoning modules. Subsequently, we exploit multiple agents to generate spare-aware interaction queries integrated with the human-object pairs. Extensive experiments on both SHOI and HOI tasks demonstrate our proposed Ag-BiGT is superior to other state-of-the-art HOI models on a suite of SHOI and HOI datasets.  
-<img src="figure/model2.jpg" alt="Your Image" width="400" height="200">
+<img src="figure/model.jpg" alt="Your Image" width="600" height="300">
 
 
 ## Comparison
