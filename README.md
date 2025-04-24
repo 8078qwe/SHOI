@@ -26,16 +26,17 @@ Human-object interaction (HOI) detection extends beyond the localization of huma
 SHOI detection shares the same goal as HOI detection, also aiming to predict a set of interaction triples, but the only difference lies in the form of localization for humans and objects. More concretely, SHOI   emphasizes generated detailed and nuanced masks for each instance instead of the conventional coarse bounding boxes.
 
 <p align='center'>  
-  <img src='figure/compare2.jpg' width='380'/>
+  <img src='figure/compare2.jpg' width='300'/>
 </p>
 
 Human-object Interaction (HOI) detection vs. Segmentation-grounded Human-Object Interaction (SHOI) detection.  (Left) illustrates an examplefrom the HICO-DET dataset. (Right) showcases the corresponding masks from our curated HICO-SG dataset. The conventional HOI task localizes humans and objects via bounding boxes involving irrelevant pixels. Our proposed SHOI task defines a more fine-grained and cleaner HOI representation with more accurate localizations of objects.
 
 
-We present construct three SHOI datasets. For more comprehensive construction details and dataset statistic, please refer to the paper.
+We present construct three SHOI datasets, including HICO-SG, VS-COCO and InterSeg
 
-<img src="figure/dataset.jpg" alt="Your Image" width="600" height="300">
-
+<p align='center'>  
+  <img src='figure/data3.jpg' width='1200'/>
+</p>
 
 #### Automated Construction of SHOI Dataset using Pipeline
 In this study, we introduce a novel approach for the automated creation of Spatial Human-Object-Interaction (SHOI) datasets.  Our method leverages segmentation models in conjunction with multimodal large-scale models within a cohesive pipeline.  This pipeline facilitates the seamless generation of SHOI datasets, thereby streamlining the data acquisition process.
