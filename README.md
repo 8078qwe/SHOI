@@ -1,4 +1,4 @@
-#Ag-BiGT 
+# Ag-BiGT 
 
 An implementation code for paper "Beyond Boxes: Towards SHOI with Interactive Graph Reasoning and Agent-Based Query Learning"
 
@@ -48,5 +48,44 @@ Furthermore, we contribute to the advancement of the field by enhancing existing
   <img src='figure/step2.jpg' width='850'/>
 </p>
 
+## Dependency
+
+### Environment Setup
+We recommend using Anaconda to set up the environment:
+
+``` bash
+conda install pytorch==1.13.1 torchvision pytorch-cuda=11.7 -c pytorch -c nvidia -y
+yes | pip install mmcv-full==1.7.0 -f https://download.openmmlab.com/mmcv/dist/cu117/torch1.13/index.html
+conda install scipy -c conda-forge -y
+yes | pip install mmcls==0.23.2
+yes | pip install mmdet==2.25.1
+yes | pip install git+https://github.com/facebookresearch/detectron2.git
+yes | pip install wandb
+```
+### Data Preparation
+The resulting directory structure should be as follows:
+
+``` bash
+├── configs
+├── data
+│   ├── VS-COCO
+│   │   ├── annotations
+|   │   │   ├── panoptic_train2017
+|   │   │   ├── panoptic_val2017
+│   │   ├── train2017
+│   │   └── val2017
+│   │   └── VS-COCO.json
+│   ├── ...
+├── pretrain
+├── agbigt
+├── scripts
+├── tools
+│   ├── train.py
+│   ├── test.py
+├── work_dirs
+├── ...
+```
+
+</details>
 
 
