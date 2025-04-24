@@ -9,7 +9,6 @@ An implementation code for paper "Beyond Boxes: Towards SHOI with Interactive Gr
 - [Datasets](#datasets)
 - [Dependency](#dependency)
 - [Usage](#usage)
-- [Citation](#citation)
 - [Acknowledgments](#acknowledgments)
 
 
@@ -21,6 +20,10 @@ Human-object interaction (HOI) detection extends beyond the localization of huma
   <img src='figure/model.jpg' width='800'/>
 </p>
 
+<p align='center'>  
+  <em>Overview of the Ag-BiGT model for pixel-level Segmentation-grounded Human-object Interaction detection.  The model consists of two main components: (1) an interactive bipartite graph transformer, which models both local and long-range dependencies by learning spatial and semantic relationships between human and object nodes, effectively distinguishing between interactive and non-interactive pairs, and (2) an agent-based interaction query generator for producing adaptive queries tailored to diverse human-object interactions.
+</em>
+</p>
 
 ## Datasets
 SHOI detection shares the same goal as HOI detection, also aiming to predict a set of interaction triples, but the only difference lies in the form of localization for humans and objects. More concretely, SHOI   emphasizes generated detailed and nuanced masks for each instance instead of the conventional coarse bounding boxes.
@@ -86,6 +89,28 @@ The resulting directory structure should be as follows:
 ├── ...
 ```
 
-</details>
+## Usage
 
+### Training
+
+```bash
+#single GPU
+PYTHONPATH='.':$PYTHONPATH python configs/mask2former/agbigt.py
+
+#multi GPU
+PYTHONPATH='.':$PYTHONPATH bash tools/dist_train.sh configs/mask2former/agbigt.py 4
+```
+
+### Testing
+
+```bash
+PYTHONPATH='.':$PYTHONPATH \
+python tools/test.py \
+    configs/deformable_detr/od_r101_coco.py \
+    pretrain/deformable_detr_r101_coco.pth \
+```
+
+## Acknowledgments
+
+Ag-BiGT is developed based on [MMDetection](https://github.com/open-mmlab/mmdetection) and [STIP](https://github.com/zyong812/STIP). We sincerely appreciate the efforts of the developers from the previous codebase.
 
